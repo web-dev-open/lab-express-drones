@@ -1,0 +1,11 @@
+<h1>Drone details</h1>
+<h3>Name</h3>
+<p>{{drone.name}}</p>
+<h3>Propellers</h3>
+<p>{{drone.propellers}}</p>
+<a href="/drones/{{drone._id}}/edit">
+    <button class="btn btn-primary">Edit</button>
+</a>
+<form method="post" action="/drones/{{drone._id}}/delete">
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>
