@@ -7,7 +7,11 @@
       <h5 class="card-title">{{name}}</h5>
       <p>Number of Propellers: {{propellers}}</p>
       <p>Max Speed: {{maxSpeed}}</p>
-      <a href="/drones/{{_id}}/edit" class="btn btn-primary">update drone</a>
+      <a href="/drones/{{_id}}/edit" class="btn btn-primary">Update drone</a>
+      <form action="/drones/{{_id}}/delete" method="post">
+
+        <button type="submit" class="btn btn-warning">Delete drone</button>
+      </form>
     </div>
   </div>
 {{/each}}
