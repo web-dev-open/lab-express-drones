@@ -7,11 +7,18 @@ const mongoose = require("mongoose");
 
 const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/lab-express-drones";
 
+const Drone=require('../models/Drone.model')
+const data=require('../seeds/drones.seed')
 mongoose
   .connect(MONGO_URI)
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
+    
   })
   .catch((err) => {
     console.error("Error connecting to mongo: ", err);
   });
+
+  Drone.deleteMany().then(d=> console.log("cleared")).catch(e=> console.log("cant clear"))
+  Drone.insertMany(data).then(d=> console.log('added data to db')).catch(error => console.log("error while adding"))
+

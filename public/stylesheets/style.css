@@ -5,4 +5,31 @@ body {
 
 a {
   color: #00b7ff;
+  text-decoration: none;
+}
+h1{
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 2.6em;
+  text-decoration: underline;
+}
+.droneBox{
+  display: inline-block;
+  margin:20px;
+  width:250px;
+  padding:15px;
+  background-color:#B77729;
+  border-radius:10px;
+}
+.droneBox:hover{
+  border-radius:30px;
+  transition:0.06s linear;
+  background-color: #d7994c;
+}
+button{
+  padding:8px 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border:none;
+  margin-bottom:10px;
 }
